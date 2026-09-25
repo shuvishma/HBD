@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+
+    <meta name="language" content="en-us" />
+    <meta
+      name="description"
+      content="May your birthday bring you as much happiness as you give to everyone who knows you."
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+
+      #mainDiv {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+      }
+
+      #content {
+        text-align: center;
+      }
+
+      #loveHeart {
+        width: 500px;
+        height: 500px;
+        background: url("guitarboy.gif") no-repeat center;
+        background-size: contain;
+      }
+
+      #hbd_song {
+        display: none;
+      }
+
+      #copyright {
+        font-family: "Montserrat", sans-serif;
+        opacity: 0.8;
+      }
+
+      #copyright a {
+        text-decoration: none;
+      }
+
+      #copyright a:hover {
+        color: #339933;
+      }
+    </style>
+
+    <script>
+      window.onload = function () {
+        document.getElementById("hbd_song").play();
+      };
+    </script>
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/cake.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./cake.png" type="image/png" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/birthday.js"></script>
+    <script type="text/javascript" src="js/hbd.js"></script>
+  </head>
+
+  <body>
+    <div id="mainDiv">
+      <div id="content">
+        <div class="scene">
+          <!-- Balloons -->
+
+          <div class="balloon balloon1"></div>
+          <div class="balloon balloon2"></div>
+
+          <div class="balloon balloon3"></div>
+          <div class="balloon balloon4"></div>
+
+          <!-- Sparkles -->
+
+          <div class="sparkle sparkle1">✦</div>
+          <div class="sparkle sparkle2">✧</div>
+          <div class="sparkle sparkle3">✦</div>
+          <div class="sparkle sparkle4">✧</div>
+
+          <!-- Cake -->
+
+          <div class="cake">
+            <div class="plate"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-top"></div>
+            <div class="frosting">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="candle" id="birthdayCandle">
+              <div class="wick"></div>
+              <div class="flame"></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <canvas id="garden" style="display: none"></canvas>
+          <audio id="hbd_song" src="audio/hbd.mp3" loop="loop"></audio>
+        </div>
+
+        <div id="code">
+          <span class="comments">/**</span><br />
+          <span class="comments"> * Today is not just another day... </span
+          ><br />
+          <span class="comments">
+            * Today is the day someone very special was born. ❤️ </span
+          ><br />
+          <span class="comments">*/</span><br /><br />
+
+          <span class="comments">// 🎂 Birthday initialization...</span><br />
+          <span class="keyword">const</span> birthday =
+          <span class="keyword">new</span> Date(
+          <span class="string">"2026-10-01"</span>
+          );<br /><br />
+
+          <span class="keyword">const</span> girl = {<br />
+          &nbsp;&nbsp;name:
+          <span class="string">"Jyothika C S"</span>,<br />
+          &nbsp;&nbsp;age:
+          <span class="number">27</span>,<br />
+          &nbsp;&nbsp;birthday:
+          <span class="string">"October 1st"</span>,<br />
+          &nbsp;&nbsp;memories:
+          <span class="string">"Priceless"</span>,<br />
+          &nbsp;&nbsp;dreams:
+          <span class="string">"Endless"</span>,<br />
+          &nbsp;&nbsp;happiness:
+          <span class="number">Infinity</span><br />
+          };<br /><br />
+
+          <span class="comments">// 💖 A few things I want you to know...</span
+          ><br />
+
+          <span class="keyword">const</span> message1 =
+          <span class="string"
+            >"May your life always be filled with happiness. "</span
+          >;<br />
+
+          <span class="keyword">const</span> message2 =
+          <span class="string"
+            >"May every dream in your heart come true. ❤️"</span
+          >;<br />
+
+          <span class="keyword">const</span> message3 =
+          <span class="string"
+            >"And may you always have a reason to smile. 😀"</span
+          >;<br /><br />
+
+          <!-- 🌿 HEALTH & WELLNESS -->
+          <span class="comments"
+            >// 🌿 Wishes for your health &amp; wellness...</span
+          ><br />
+
+          <span class="keyword">const</span> health = {<br />
+          &nbsp;&nbsp;energy:
+          <span class="string">"Always High"</span>,<br />
+
+          &nbsp;&nbsp;strength:
+          <span class="string">"Always Growing"</span>,<br />
+
+          &nbsp;&nbsp;peace:
+          <span class="string">"Every Single Day"</span>,<br />
+
+          &nbsp;&nbsp;sleep:
+          <span class="string">"Deep &amp; Peaceful"</span>,<br />
+
+          &nbsp;&nbsp;health:
+          <span class="string">"Strong &amp; Healthy"</span>,<br />
+
+          &nbsp;&nbsp;mind:
+          <span class="string">"Calm &amp; Happy"</span>,<br />
+
+          &nbsp;&nbsp;heart:
+          <span class="string">"Full of Joy"</span><br />
+          };<br /><br />
+
+          <span class="keyword">function</span> takeCareOfYourself() {<br />
+
+          &nbsp;&nbsp;eatWell();<br />
+
+          &nbsp;&nbsp;stayHydrated();<br />
+
+          &nbsp;&nbsp;getEnoughSleep();<br />
+
+          &nbsp;&nbsp;keepSmiling();<br />
+
+          &nbsp;&nbsp;enjoyEveryMoment();<br />
+
+          &nbsp;&nbsp;protectYourPeace();<br />
+
+          }<br /><br />
+
+          <span class="comments"> // 🌸 My wish for you: </span><br />
+
+          <span class="comments"> // May you always have good health, </span
+          ><br />
+
+          <span class="comments"> // a peaceful mind, endless energy, </span
+          ><br />
+
+          <span class="comments"> // and countless reasons to smile. ❤️ </span
+          ><br /><br />
+
+          <span class="keyword">const</span> healthForYou =
+          <span class="number">Infinity</span>;<br />
+
+          <span class="comments">// ✨ And finally...</span><br />
+
+          <span class="keyword">if</span> (girl.special ===
+          <span class="keyword">true</span>) {<br />
+
+          &nbsp;&nbsp;<span class="comments">
+            // Then she deserves the most beautiful birthday. </span
+          ><br />
+
+          &nbsp;&nbsp;celebrate(girl);<br />
+
+          }<br /><br />
+
+          console.log(
+          <span class="string"> "Happy Birthday, Jyothika" </span>
+          );<br />
+
+          console.log(
+          <span class="string"> "May your smile never fade..." </span>
+          );<br />
+
+          console.log(
+          <span class="string"> "May your dreams always come true..." </span>
+          );<br />
+
+          console.log(
+          <span class="string">
+            "And may this year be your most beautiful one yet."
+          </span>
+          );
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        const candle = document.getElementById("birthdayCandle");
+        const scene = document.querySelector(".scene");
+        const code = document.getElementById("code");
+        const song = document.getElementById("hbd_song");
+
+        let started = false;
+
+        candle.addEventListener("click", function () {
+          if (started) return;
+          started = true;
+
+          // 🔥 Light candle
+          candle.classList.add("lit");
+
+          // 🎵 Play sound ONLY after candle click
+          song.currentTime = 0;
+          song.play().catch((error) => {
+            console.log("Audio playback failed:", error);
+          });
+
+          // 🎈 Show balloons
+          setTimeout(() => {
+            scene.classList.add("balloons-show");
+          }, 700);
+
+          // 💻 Start typing code
+          setTimeout(() => {
+            code.style.display = "block";
+            // $("#code").typewriter();
+            typeCode(code, 50);
+          }, 800);
+        });
+      });
+
+      function typeCode(element, speed) {
+        const html = element.innerHTML;
+
+        element.innerHTML = "";
+        element.style.display = "block";
+
+        let index = 0;
+
+        function type() {
+          if (index < html.length) {
+            element.innerHTML = html.substring(0, index + 1);
+            index++;
+
+            setTimeout(type, speed);
+          }
+        }
+
+        type();
+      }
+    </script>
+  </body>
+</html>
